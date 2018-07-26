@@ -1,0 +1,592 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/hexo/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/hexo/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/hexo/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="android,adb," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/hexo/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="参考
+http://www.2cto.com/kf/201502/376365.html
+
+1. 打开Activity12adb shellam start -n com.edog.car/com.edog.activity.SplashActivity
+2. 控制音量增大音量1adb shell input keyevent 24
+减小音量1adb shell input keyevent 25">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ADB命令">
+<meta property="og:url" content="http://www.novelot.com/2016/10/24/1023/index.html">
+<meta property="og:site_name" content="NOVELOT">
+<meta property="og:description" content="参考
+http://www.2cto.com/kf/201502/376365.html
+
+1. 打开Activity12adb shellam start -n com.edog.car/com.edog.activity.SplashActivity
+2. 控制音量增大音量1adb shell input keyevent 24
+减小音量1adb shell input keyevent 25">
+<meta property="og:updated_time" content="2016-10-24T15:52:22.600Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ADB命令">
+<meta name="twitter:description" content="参考
+http://www.2cto.com/kf/201502/376365.html
+
+1. 打开Activity12adb shellam start -n com.edog.car/com.edog.activity.SplashActivity
+2. 控制音量增大音量1adb shell input keyevent 24
+减小音量1adb shell input keyevent 25">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://www.novelot.com/2016/10/24/1023/"/>
+
+  <title> ADB命令 | NOVELOT </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/hexo/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">NOVELOT</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">独立思考</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/hexo/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/hexo/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/hexo/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                ADB命令
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-24T23:43:08+08:00" content="2016-10-24">
+              2016-10-24
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><blockquote>
+<p><a href="http://www.2cto.com/kf/201502/376365.html" target="_blank" rel="external">http://www.2cto.com/kf/201502/376365.html</a></p>
+</blockquote>
+<h3 id="1-打开Activity"><a href="#1-打开Activity" class="headerlink" title="1. 打开Activity"></a>1. 打开Activity</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">adb shell</div><div class="line">am start -n com.edog.car/com.edog.activity.SplashActivity</div></pre></td></tr></table></figure>
+<h3 id="2-控制音量"><a href="#2-控制音量" class="headerlink" title="2. 控制音量"></a>2. 控制音量</h3><p>增大音量<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">adb shell input keyevent 24</div></pre></td></tr></table></figure></p>
+<p>减小音量<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">adb shell input keyevent 25</div></pre></td></tr></table></figure></p>
+<h3 id="3-关闭应用"><a href="#3-关闭应用" class="headerlink" title="3. 关闭应用"></a>3. 关闭应用</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">adb shell am force-stop 包名</div></pre></td></tr></table></figure>
+<h3 id="4-将电脑上的文件复制到手机上"><a href="#4-将电脑上的文件复制到手机上" class="headerlink" title="4. 将电脑上的文件复制到手机上"></a>4. 将电脑上的文件复制到手机上</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">adb push 电脑上的路径 手机路径(不用带文件名,只写文件夹名就行)</div></pre></td></tr></table></figure>
+<h3 id="5-使用adb查看log"><a href="#5-使用adb查看log" class="headerlink" title="5. 使用adb查看log"></a>5. 使用adb查看log</h3><p>清空log<br><code>adb logcat -c</code>  </p>
+<p>打印log<br><code>adb logcat</code>  </p>
+<p>清空并打印<br><code>adb logcat -c &amp;&amp; adb logcat</code>  </p>
+<p>使用I,V,D,E,F,W等过滤<br><code>adb logcat *:I</code>  </p>
+<p>打印指定TAG;!!!!!!!!!!重要!!!!!!!!!!!!!!!<br><code>adb logcat TAG:* *:S</code></p>
+<p>打印有时间的log;<br><code>adb logcat -v time</code>  </p>
+<p>只显示进程id<br><code>adb logcat -v process</code>  </p>
+<h3 id="6-设置安装路径"><a href="#6-设置安装路径" class="headerlink" title="6. 设置安装路径"></a>6. 设置安装路径</h3><p>pm 查看<br>0 auto<br>1 内存<br>2 sdcard</p>
+<p><code>pm set-install-location 2</code>  </p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/hexo/tags/android/" rel="tag">#android</a>
+          
+            <a href="/hexo/tags/adb/" rel="tag">#adb</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/hexo/2016/10/24/1024/" rel="next" title="Mysql学习笔记">
+                <i class="fa fa-chevron-left"></i> Mysql学习笔记
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/hexo/2016/10/24/1022/" rel="prev" title="Android测试笔记">
+                Android测试笔记 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://www.novelot.com/avatar.jpg"
+               alt="刘云龙" />
+          <p class="site-author-name" itemprop="name">刘云龙</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/hexo/archives">
+              <span class="site-state-item-count">24</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/hexo/tags">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#参考"><span class="nav-number">1.</span> <span class="nav-text">参考</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-打开Activity"><span class="nav-number"></span> <span class="nav-text">1. 打开Activity</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-控制音量"><span class="nav-number"></span> <span class="nav-text">2. 控制音量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-关闭应用"><span class="nav-number"></span> <span class="nav-text">3. 关闭应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-将电脑上的文件复制到手机上"><span class="nav-number"></span> <span class="nav-text">4. 将电脑上的文件复制到手机上</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-使用adb查看log"><span class="nav-number"></span> <span class="nav-text">5. 使用adb查看log</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-设置安装路径"><span class="nav-number"></span> <span class="nav-text">6. 设置安装路径</span></a></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">刘云龙</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/hexo/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/hexo/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/hexo/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/hexo/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/hexo/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/hexo/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/hexo/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/hexo/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/hexo/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/hexo/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/hexo/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

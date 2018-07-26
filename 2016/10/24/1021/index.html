@@ -1,0 +1,597 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/hexo/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/hexo/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/hexo/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="android," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/hexo/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="参考
+http://anupcowkur.com/posts/a-look-at-android-support-annotations/
+
+引用compile &amp;#39;com.android.support:support-annotations:20.0.0&amp;#39;
+Nullness注解12@Nullable 可为null  @NonNull 不可为null
+资源类型注解12345@Str">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android注解学习笔记">
+<meta property="og:url" content="http://www.novelot.com/2016/10/24/1021/index.html">
+<meta property="og:site_name" content="NOVELOT">
+<meta property="og:description" content="参考
+http://anupcowkur.com/posts/a-look-at-android-support-annotations/
+
+引用compile &amp;#39;com.android.support:support-annotations:20.0.0&amp;#39;
+Nullness注解12@Nullable 可为null  @NonNull 不可为null
+资源类型注解12345@Str">
+<meta property="og:updated_time" content="2016-10-24T15:56:37.697Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Android注解学习笔记">
+<meta name="twitter:description" content="参考
+http://anupcowkur.com/posts/a-look-at-android-support-annotations/
+
+引用compile &amp;#39;com.android.support:support-annotations:20.0.0&amp;#39;
+Nullness注解12@Nullable 可为null  @NonNull 不可为null
+资源类型注解12345@Str">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://www.novelot.com/2016/10/24/1021/"/>
+
+  <title> Android注解学习笔记 | NOVELOT </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/hexo/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">NOVELOT</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">独立思考</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/hexo/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/hexo/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/hexo/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Android注解学习笔记
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-24T23:55:47+08:00" content="2016-10-24">
+              2016-10-24
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><blockquote>
+<p><a href="http://anupcowkur.com/posts/a-look-at-android-support-annotations/" target="_blank" rel="external">http://anupcowkur.com/posts/a-look-at-android-support-annotations/</a></p>
+</blockquote>
+<h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><p><code>compile &#39;com.android.support:support-annotations:20.0.0&#39;</code></p>
+<h1 id="Nullness注解"><a href="#Nullness注解" class="headerlink" title="Nullness注解"></a>Nullness注解</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">@Nullable 可为null  </div><div class="line">@NonNull 不可为null</div></pre></td></tr></table></figure>
+<h1 id="资源类型注解"><a href="#资源类型注解" class="headerlink" title="资源类型注解"></a>资源类型注解</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">@StringRes  </div><div class="line">@DrawableRes  </div><div class="line">@ColorRes  </div><div class="line">@InterpolatorRes  </div><div class="line">@AnyRes</div></pre></td></tr></table></figure>
+<h1 id="IntDef和StringDef注解"><a href="#IntDef和StringDef注解" class="headerlink" title="IntDef和StringDef注解"></a>IntDef和StringDef注解</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">@IntDef(&#123;1, 2, 3&#125;) 只在&#123;1,2,3&#125;中选择</div><div class="line">@StringDef  </div><div class="line">```  </div><div class="line">  </div><div class="line"># 线程注解  </div><div class="line">```  </div><div class="line">@UiThread  </div><div class="line">@MainThread  </div><div class="line">@WorkerThread  </div><div class="line">@BinderThread  </div><div class="line">```  </div><div class="line"># 混淆注解  </div><div class="line">```  </div><div class="line">@Keep</div></pre></td></tr></table></figure>
+<h1 id="权限注解"><a href="#权限注解" class="headerlink" title="权限注解"></a>权限注解</h1><pre><code>@RequiresPermission(Manifest.permission.SET_WALLPAPER)  
+
+@RequiresPermission(anyOf = {
+    Manifest.permission.ACCESS_COARSE_LOCATION,
+    Manifest.permission.ACCESS_FINE_LOCATION})  
+
+@RequiresPermission(allOf = {
+    Manifest.permission.READ_HISTORY_BOOKMARKS, 
+    Manifest.permission.WRITE_HISTORY_BOOKMARKS})
+</code></pre><h1 id="继承限制注解"><a href="#继承限制注解" class="headerlink" title="继承限制注解"></a>继承限制注解</h1><pre><code>@CallSuper
+</code></pre><h1 id="返回值注解"><a href="#返回值注解" class="headerlink" title="返回值注解"></a>返回值注解</h1><pre><code>@CheckResult  
+@CheckResult(suggest=&quot;#enforcePermission(String,int,int,String)&quot;)
+</code></pre><h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><pre><code>@ColorRes  
+@ColorInt  
+@Size  
+@IntRange  
+@FloatRange  
+@IntRange(from=0,to=255)  
+@Size(min=1)  
+@Size(max=23)  
+@Size(2)
+</code></pre>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/hexo/tags/android/" rel="tag">#android</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/hexo/2016/10/24/1022/" rel="next" title="Android测试笔记">
+                <i class="fa fa-chevron-left"></i> Android测试笔记
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://www.novelot.com/avatar.jpg"
+               alt="刘云龙" />
+          <p class="site-author-name" itemprop="name">刘云龙</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/hexo/archives">
+              <span class="site-state-item-count">24</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/hexo/tags">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#参考"><span class="nav-number">1.</span> <span class="nav-text">参考</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引用"><span class="nav-number">2.</span> <span class="nav-text">引用</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Nullness注解"><span class="nav-number"></span> <span class="nav-text">Nullness注解</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#资源类型注解"><span class="nav-number"></span> <span class="nav-text">资源类型注解</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IntDef和StringDef注解"><span class="nav-number"></span> <span class="nav-text">IntDef和StringDef注解</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#权限注解"><span class="nav-number"></span> <span class="nav-text">权限注解</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#继承限制注解"><span class="nav-number"></span> <span class="nav-text">继承限制注解</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#返回值注解"><span class="nav-number"></span> <span class="nav-text">返回值注解</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#其他"><span class="nav-number"></span> <span class="nav-text">其他</span></a></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">刘云龙</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/hexo/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/hexo/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/hexo/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/hexo/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/hexo/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/hexo/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/hexo/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/hexo/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/hexo/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/hexo/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/hexo/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
