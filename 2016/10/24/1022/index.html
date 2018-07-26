@@ -1,15 +1,22 @@
-<!doctype html>
+<!DOCTYPE html>
 
 
 
   
 
 
-<html class="theme-next muse use-motion">
+<html class="theme-next muse use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
 
 
 
@@ -27,45 +34,38 @@
 
 
 
-  
-  
-  <link href="/hexo/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
 
   
   
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
 
 
 
-<link href="/hexo/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
 
-<link href="/hexo/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
 
 
   <meta name="keywords" content="android,test," />
@@ -77,68 +77,56 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/hexo/favicon.ico?v=5.0.1" />
 
 
-
-
-
-
-<meta name="description" content="使用方法
-继承AndroidTestCase
-配置指令集:instrumentation在manifest节点下
-配置函数库:uses-library在Application节点下
-assertEquals  
-
-相关类1234567891011121314151617Object	junit.framework.Assert:断言类,提供assertXXX()和failXXX()方法;		jun">
+<meta name="description" content="使用方法 继承AndroidTestCase 配置指令集:instrumentation在manifest节点下 配置函数库:uses-library在Application节点下 assertEquals    相关类1234567891011121314151617Object	junit.framework.Assert:断言类,提供assertXXX()和failXXX()方法;		jun">
+<meta name="keywords" content="android,test">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Android测试笔记">
-<meta property="og:url" content="http://www.novelot.com/2016/10/24/1022/index.html">
-<meta property="og:site_name" content="NOVELOT">
-<meta property="og:description" content="使用方法
-继承AndroidTestCase
-配置指令集:instrumentation在manifest节点下
-配置函数库:uses-library在Application节点下
-assertEquals  
-
-相关类1234567891011121314151617Object	junit.framework.Assert:断言类,提供assertXXX()和failXXX()方法;		jun">
-<meta property="og:updated_time" content="2016-10-24T15:50:57.425Z">
+<meta property="og:url" content="http://yoursite.com/2016/10/24/1022/index.html">
+<meta property="og:site_name" content="Novelot">
+<meta property="og:description" content="使用方法 继承AndroidTestCase 配置指令集:instrumentation在manifest节点下 配置函数库:uses-library在Application节点下 assertEquals    相关类1234567891011121314151617Object	junit.framework.Assert:断言类,提供assertXXX()和failXXX()方法;		jun">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2016-10-24T15:50:56.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android测试笔记">
-<meta name="twitter:description" content="使用方法
-继承AndroidTestCase
-配置指令集:instrumentation在manifest节点下
-配置函数库:uses-library在Application节点下
-assertEquals  
-
-相关类1234567891011121314151617Object	junit.framework.Assert:断言类,提供assertXXX()和failXXX()方法;		jun">
+<meta name="twitter:description" content="使用方法 继承AndroidTestCase 配置指令集:instrumentation在manifest节点下 配置函数库:uses-library在Application节点下 assertEquals    相关类1234567891011121314151617Object	junit.framework.Assert:断言类,提供assertXXX()和failXXX()方法;		jun">
 
 
 
-<script type="text/javascript" id="hexo.configuration">
+<script type="text/javascript" id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
+    root: '/',
     scheme: 'Muse',
-    sidebar: {"position":"left","display":"post"},
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
-    motion: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     duoshuo: {
-      userId: 0,
+      userId: '0',
       author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
   };
 </script>
 
 
 
+  <link rel="canonical" href="http://yoursite.com/2016/10/24/1022/"/>
 
-  <link rel="canonical" href="http://www.novelot.com/2016/10/24/1022/"/>
 
-  <title> Android测试笔记 | NOVELOT </title>
-</head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
+
+  <title>Android测试笔记 | Novelot</title>
   
 
 
@@ -148,36 +136,42 @@ assertEquals
 
 
 
+</head>
 
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
   
     
   
 
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta ">
-  
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
 
-  <div class="custom-logo-site-title">
-    <a href="/hexo/"  class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <span class="site-title">NOVELOT</span>
-      <span class="logo-line-after"><i></i></span>
-    </a>
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Novelot</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
   </div>
-  <p class="site-subtitle">独立思考</p>
-</div>
 
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
 </div>
 
 <nav class="site-nav">
@@ -188,7 +182,7 @@ assertEquals
       
         
         <li class="menu-item menu-item-home">
-          <a href="/hexo/" rel="section">
+          <a href="/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
@@ -198,21 +192,11 @@ assertEquals
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/hexo/archives" rel="section">
+          <a href="/archives/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
             归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/hexo/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
           </a>
         </li>
       
@@ -223,6 +207,8 @@ assertEquals
 
   
 </nav>
+
+
 
  </div>
     </header>
@@ -237,38 +223,53 @@ assertEquals
     
 
   
-  
 
   
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/10/24/1022/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="V">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Novelot">
+    </span>
 
     
       <header class="post-header">
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                Android测试笔记
-              
-            
-          </h1>
+          <h1 class="post-title" itemprop="name headline">Android测试笔记</h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-10-24T23:47:54+08:00" content="2016-10-24">
-              2016-10-24
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-10-24T23:47:54+08:00">
+                2016-10-24
+              </time>
+            
+
+            
+
+            
           </span>
 
           
@@ -278,16 +279,21 @@ assertEquals
           
 
           
-
-          
           
 
           
+
+          
+
+          
+
         </div>
       </header>
     
 
-
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -300,59 +306,60 @@ assertEquals
 <li>配置函数库:uses-library在Application节点下</li>
 <li>assertEquals  </li>
 </ol>
-<h2 id="相关类"><a href="#相关类" class="headerlink" title="相关类"></a>相关类</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">Object</div><div class="line">	junit.framework.Assert:断言类,提供assertXXX()和failXXX()方法;</div><div class="line">		junit.framework.TestCase:没有抽象方法的抽象类</div><div class="line">			FailedToCreateTests</div><div class="line">			android.test.AndroidTestCase</div><div class="line">				android.test.ProviderTestCase2</div><div class="line">				android.test.LoaderTestCase</div><div class="line">				android.test.ServiceTestCase</div><div class="line">				android.test.ApplicationTestCase</div><div class="line">			android.test.InstrumentationTestCase</div><div class="line">				SingleLaunchActivityTestCase</div><div class="line">				SyncBaseInstrumentation</div><div class="line">				ProviderTestCase:过时</div><div class="line">				ActivityTestCase</div><div class="line">					ActivityInstrumentationTestCase:过时</div><div class="line">					ActivityUnitTestCase</div><div class="line">					ActivityInstrumentationTestCase2</div></pre></td></tr></table></figure>
-<h2 id="几个重要的类"><a href="#几个重要的类" class="headerlink" title="几个重要的类"></a>几个重要的类</h2><h2 id="TestCase-无抽象方法的抽象类"><a href="#TestCase-无抽象方法的抽象类" class="headerlink" title="TestCase:无抽象方法的抽象类"></a>TestCase:无抽象方法的抽象类</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">setUp() </div><div class="line">tearDown()</div><div class="line">runTest()</div></pre></td></tr></table></figure>
-<h2 id="InstrumentationTestCase"><a href="#InstrumentationTestCase" class="headerlink" title="InstrumentationTestCase"></a>InstrumentationTestCase</h2><h4 id="内部成员"><a href="#内部成员" class="headerlink" title="内部成员:"></a>内部成员:</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">Instrumentation(因撕戳么儿,忒深)指令集  </div><div class="line">newApplication()  </div><div class="line">newActivity()  </div><div class="line">getContext()  </div><div class="line">callApplicationOnCreate():调用Application的onCreate()方法;  </div><div class="line">callActivityOnXXX():等生命周期方法;  </div><div class="line">execStartActivity():</div></pre></td></tr></table></figure>
-<h4 id="内部方法"><a href="#内部方法" class="headerlink" title="内部方法:"></a>内部方法:</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">runTest() :重写父类方法,通过反射调用被测方法;  </div><div class="line">tearDown():重写父类方法;  </div><div class="line">setUp() :未重写父类方法; </div><div class="line">```</div></pre></td></tr></table></figure>
-<p>getInstrumentation()<br>launchActivity()<br>launchActivityWithIntent()<br>runTestOnUiThread()<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">## ActivityTestCase</div><div class="line">#### 内部成员:  </div><div class="line">Activity</div><div class="line"></div><div class="line">#### 内部方法:</div></pre></td></tr></table></figure></p>
-<p>setUp() :未重写父类方法;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">```</div><div class="line">getActivity():  </div><div class="line">setActivity():  </div><div class="line">scrubClass():刷除类,将类中的成员变量清为null,利用反射;</div></pre></td></tr></table></figure></p>
-<h2 id="ActivityInstrumentationTestCase2"><a href="#ActivityInstrumentationTestCase2" class="headerlink" title="ActivityInstrumentationTestCase2"></a>ActivityInstrumentationTestCase2</h2><h4 id="内部成员-1"><a href="#内部成员-1" class="headerlink" title="内部成员:"></a>内部成员:</h4><h4 id="内部方法-1"><a href="#内部方法-1" class="headerlink" title="内部方法:"></a>内部方法:</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">tearDown():重写父类方法,finish(结束)Activity,scrubClass(刷除)ActivityInstrumentationTestCase2;</div><div class="line">setUp() :重写父类方法;  </div><div class="line">runTest():重写父类方法,目的是为了先创建Activity;</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">getActivity():对父类中的成员变量mActivity进行了强转;如有必要会先创建Activity;  </div><div class="line">setActivityIntent():</div></pre></td></tr></table></figure>
-<h2 id="AndroidTestCase"><a href="#AndroidTestCase" class="headerlink" title="AndroidTestCase"></a>AndroidTestCase</h2><h4 id="内部成员-2"><a href="#内部成员-2" class="headerlink" title="内部成员:"></a>内部成员:</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Context 上下文</div></pre></td></tr></table></figure>
-<h4 id="内部方法-2"><a href="#内部方法-2" class="headerlink" title="内部方法:"></a>内部方法:</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">setUp():重写父类方法;  </div><div class="line">tearDown():重写父类方法;  </div><div class="line">runTest():未重写;</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">getContext():获取上下文;  </div><div class="line">assertXXXRequiresPermission():断言是否拥有某种系统权限;  </div><div class="line">scrubClass():刷除类,将类中的成员变量清为null,利用反射;</div></pre></td></tr></table></figure>
-<h2 id="JUnit测试框架-j2se"><a href="#JUnit测试框架-j2se" class="headerlink" title="JUnit测试框架(j2se)"></a>JUnit测试框架(j2se)</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">@Test注解</div><div class="line">	被测类必须:public</div><div class="line">	被测方法必须:无参数,无返回值,非静态  </div><div class="line">@Before在被测方法之前调用;  </div><div class="line">@After在被测方法之后调用;  </div><div class="line">@BeforeClass在类被加载后立即调用,方法必须static;  </div><div class="line">@AfterClass在类被释放前执行,方法必须为static;</div></pre></td></tr></table></figure>
+<h2 id="相关类"><a href="#相关类" class="headerlink" title="相关类"></a>相关类</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">Object</span><br><span class="line">	junit.framework.Assert:断言类,提供assertXXX()和failXXX()方法;</span><br><span class="line">		junit.framework.TestCase:没有抽象方法的抽象类</span><br><span class="line">			FailedToCreateTests</span><br><span class="line">			android.test.AndroidTestCase</span><br><span class="line">				android.test.ProviderTestCase2</span><br><span class="line">				android.test.LoaderTestCase</span><br><span class="line">				android.test.ServiceTestCase</span><br><span class="line">				android.test.ApplicationTestCase</span><br><span class="line">			android.test.InstrumentationTestCase</span><br><span class="line">				SingleLaunchActivityTestCase</span><br><span class="line">				SyncBaseInstrumentation</span><br><span class="line">				ProviderTestCase:过时</span><br><span class="line">				ActivityTestCase</span><br><span class="line">					ActivityInstrumentationTestCase:过时</span><br><span class="line">					ActivityUnitTestCase</span><br><span class="line">					ActivityInstrumentationTestCase2</span><br></pre></td></tr></table></figure>
+<h2 id="几个重要的类"><a href="#几个重要的类" class="headerlink" title="几个重要的类"></a>几个重要的类</h2><h2 id="TestCase-无抽象方法的抽象类"><a href="#TestCase-无抽象方法的抽象类" class="headerlink" title="TestCase:无抽象方法的抽象类"></a>TestCase:无抽象方法的抽象类</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">setUp() </span><br><span class="line">tearDown()</span><br><span class="line">runTest()</span><br></pre></td></tr></table></figure>
+<h2 id="InstrumentationTestCase"><a href="#InstrumentationTestCase" class="headerlink" title="InstrumentationTestCase"></a>InstrumentationTestCase</h2><h4 id="内部成员"><a href="#内部成员" class="headerlink" title="内部成员:"></a>内部成员:</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Instrumentation(因撕戳么儿,忒深)指令集  </span><br><span class="line">newApplication()  </span><br><span class="line">newActivity()  </span><br><span class="line">getContext()  </span><br><span class="line">callApplicationOnCreate():调用Application的onCreate()方法;  </span><br><span class="line">callActivityOnXXX():等生命周期方法;  </span><br><span class="line">execStartActivity():</span><br></pre></td></tr></table></figure>
+<h4 id="内部方法"><a href="#内部方法" class="headerlink" title="内部方法:"></a>内部方法:</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">runTest() :重写父类方法,通过反射调用被测方法;  </span><br><span class="line">tearDown():重写父类方法;  </span><br><span class="line">setUp() :未重写父类方法; </span><br><span class="line">```</span><br></pre></td></tr></table></figure>
+<p>getInstrumentation()<br>launchActivity()<br>launchActivityWithIntent()<br>runTestOnUiThread()<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## ActivityTestCase</span><br><span class="line">#### 内部成员:  </span><br><span class="line">Activity</span><br><span class="line"></span><br><span class="line">#### 内部方法:</span><br></pre></td></tr></table></figure></p>
+<p>setUp() :未重写父类方法;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line">getActivity():  </span><br><span class="line">setActivity():  </span><br><span class="line">scrubClass():刷除类,将类中的成员变量清为null,利用反射;</span><br></pre></td></tr></table></figure></p>
+<h2 id="ActivityInstrumentationTestCase2"><a href="#ActivityInstrumentationTestCase2" class="headerlink" title="ActivityInstrumentationTestCase2"></a>ActivityInstrumentationTestCase2</h2><h4 id="内部成员-1"><a href="#内部成员-1" class="headerlink" title="内部成员:"></a>内部成员:</h4><h4 id="内部方法-1"><a href="#内部方法-1" class="headerlink" title="内部方法:"></a>内部方法:</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tearDown():重写父类方法,finish(结束)Activity,scrubClass(刷除)ActivityInstrumentationTestCase2;</span><br><span class="line">setUp() :重写父类方法;  </span><br><span class="line">runTest():重写父类方法,目的是为了先创建Activity;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">getActivity():对父类中的成员变量mActivity进行了强转;如有必要会先创建Activity;  </span><br><span class="line">setActivityIntent():</span><br></pre></td></tr></table></figure>
+<h2 id="AndroidTestCase"><a href="#AndroidTestCase" class="headerlink" title="AndroidTestCase"></a>AndroidTestCase</h2><h4 id="内部成员-2"><a href="#内部成员-2" class="headerlink" title="内部成员:"></a>内部成员:</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Context 上下文</span><br></pre></td></tr></table></figure>
+<h4 id="内部方法-2"><a href="#内部方法-2" class="headerlink" title="内部方法:"></a>内部方法:</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">setUp():重写父类方法;  </span><br><span class="line">tearDown():重写父类方法;  </span><br><span class="line">runTest():未重写;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">getContext():获取上下文;  </span><br><span class="line">assertXXXRequiresPermission():断言是否拥有某种系统权限;  </span><br><span class="line">scrubClass():刷除类,将类中的成员变量清为null,利用反射;</span><br></pre></td></tr></table></figure>
+<h2 id="JUnit测试框架-j2se"><a href="#JUnit测试框架-j2se" class="headerlink" title="JUnit测试框架(j2se)"></a>JUnit测试框架(j2se)</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">@Test注解</span><br><span class="line">	被测类必须:public</span><br><span class="line">	被测方法必须:无参数,无返回值,非静态  </span><br><span class="line">@Before在被测方法之前调用;  </span><br><span class="line">@After在被测方法之后调用;  </span><br><span class="line">@BeforeClass在类被加载后立即调用,方法必须static;  </span><br><span class="line">@AfterClass在类被释放前执行,方法必须为static;</span><br></pre></td></tr></table></figure>
       
     </div>
+    
+    
+    
 
-    <div>
-      
-        
+    
 
-      
-    </div>
+    
 
-    <div>
-      
-        
-
-      
-    </div>
+    
 
     <footer class="post-footer">
       
         <div class="post-tags">
           
-            <a href="/hexo/tags/android/" rel="tag">#android</a>
+            <a href="/tags/android/" rel="tag"># android</a>
           
-            <a href="/hexo/tags/test/" rel="tag">#test</a>
+            <a href="/tags/test/" rel="tag"># test</a>
           
         </div>
+      
+
+      
+      
       
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/hexo/2016/10/24/1023/" rel="next" title="ADB命令">
+              <a href="/2016/10/24/1023/" rel="next" title="ADB命令">
                 <i class="fa fa-chevron-left"></i> ADB命令
               </a>
             
           </div>
 
+          <span class="post-nav-divider"></span>
+
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/hexo/2016/10/24/1021/" rel="prev" title="Android注解学习笔记">
+              <a href="/2016/10/24/1021/" rel="prev" title="Android注解学习笔记">
                 Android注解学习笔记 <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -363,6 +370,10 @@ assertEquals
       
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -378,9 +389,9 @@ assertEquals
 
 
           
-  <div class="comments" id="comments">
-    
-  </div>
+
+  
+
 
 
         </div>
@@ -396,75 +407,91 @@ assertEquals
   </div>
 
   <aside id="sidebar" class="sidebar">
+    
     <div class="sidebar-inner">
 
       
 
       
         <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
             文章目录
           </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
             站点概览
           </li>
         </ul>
       
 
-      <section class="site-overview sidebar-panel ">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="http://www.novelot.com/avatar.jpg"
-               alt="刘云龙" />
-          <p class="site-author-name" itemprop="name">刘云龙</p>
-          <p class="site-description motion-element" itemprop="description"></p>
-        </div>
-        <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/hexo/archives">
-              <span class="site-state-item-count">24</span>
-              <span class="site-state-item-name">日志</span>
-            </a>
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">V</p>
+              <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
           
 
           
-            <div class="site-state-item site-state-tags">
-              <a href="/hexo/tags">
-                <span class="site-state-item-count">5</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
-            </div>
+
+          
           
 
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
           
+          
+
+          
+
         </div>
-
-        
-        
-
-        
-        
-
       </section>
 
       
+      <!--noindex-->
         <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
           <div class="post-toc">
+
             
               
             
+
             
               <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用方法"><span class="nav-number">1.</span> <span class="nav-text">使用方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#相关类"><span class="nav-number">2.</span> <span class="nav-text">相关类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#几个重要的类"><span class="nav-number">3.</span> <span class="nav-text">几个重要的类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TestCase-无抽象方法的抽象类"><span class="nav-number">4.</span> <span class="nav-text">TestCase:无抽象方法的抽象类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#InstrumentationTestCase"><span class="nav-number">5.</span> <span class="nav-text">InstrumentationTestCase</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#内部成员"><span class="nav-number">5.0.1.</span> <span class="nav-text">内部成员:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#内部方法"><span class="nav-number">5.0.2.</span> <span class="nav-text">内部方法:</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ActivityInstrumentationTestCase2"><span class="nav-number">6.</span> <span class="nav-text">ActivityInstrumentationTestCase2</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#内部成员-1"><span class="nav-number">6.0.1.</span> <span class="nav-text">内部成员:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#内部方法-1"><span class="nav-number">6.0.2.</span> <span class="nav-text">内部方法:</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AndroidTestCase"><span class="nav-number">7.</span> <span class="nav-text">AndroidTestCase</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#内部成员-2"><span class="nav-number">7.0.1.</span> <span class="nav-text">内部成员:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#内部方法-2"><span class="nav-number">7.0.2.</span> <span class="nav-text">内部方法:</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JUnit测试框架-j2se"><span class="nav-number">8.</span> <span class="nav-text">JUnit测试框架(j2se)</span></a></li></ol></div>
             
+
           </div>
         </section>
+      <!--/noindex-->
+      
+
       
 
     </div>
@@ -477,36 +504,50 @@ assertEquals
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy; 
-  <span itemprop="copyrightYear">2017</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
-    <i class="fa fa-heart"></i>
+    <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">刘云龙</span>
+  <span class="author" itemprop="copyrightHolder">V</span>
+
+  
 </div>
 
-<div class="powered-by">
-  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
-</div>
 
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Muse
-  </a>
-</div>
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
 
         
+
+
+
+
+
+
 
         
       </div>
     </footer>
 
-    <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
-    </div>
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
   </div>
 
   
@@ -529,47 +570,82 @@ assertEquals
 
 
 
-  
-  <script type="text/javascript" src="/hexo/vendors/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/hexo/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/hexo/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/hexo/vendors/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/hexo/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/hexo/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 
-  
 
 
-  <script type="text/javascript" src="/hexo/js/src/utils.js?v=5.0.1"></script>
 
-  <script type="text/javascript" src="/hexo/js/src/motion.js?v=5.0.1"></script>
+
 
 
 
   
   
-
-  
-  <script type="text/javascript" src="/hexo/js/src/scrollspy.js?v=5.0.1"></script>
-<script type="text/javascript" src="/hexo/js/src/post-details.js?v=5.0.1"></script>
-
-
-
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
   
 
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
 
-  <script type="text/javascript" src="/hexo/js/src/bootstrap.js?v=5.0.1"></script>
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
 
 
 
@@ -577,10 +653,32 @@ assertEquals
 
 
 
+
+
   
 
 
 
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
 
   
   
